@@ -11,6 +11,7 @@ import Color from "../pages/Color";
 import MakingColor from "../pages/MakingColor";
 import NewMakingColor from "../pages/NewMakingColor";
 import ReducerMakingColor from "../pages/ReducerMakingColor";
+import CounterUseReducer from "../pages/CounterUseReducer";
 
 const AppNavigator = createStackNavigator(
   {
@@ -23,7 +24,8 @@ const AppNavigator = createStackNavigator(
     Color,
     MakingColor,
     NewMakingColor,
-    ReducerMakingColor
+    ReducerMakingColor,
+    CounterUseReducer
   },
   {
     initialRouteName: "Home",

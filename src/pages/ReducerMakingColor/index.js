@@ -11,7 +11,7 @@ const reducer = (state, action) => {
 
   switch (action.type) {
     case "change_red":
-      if (state.red + action.payload > 255 || state.red + action.payload < 0) {
+      if (state.red + action.payload > 255 || state.red + actio < 0) {
         return state;
       }
       return { ...state, red: state.red + action.payload };

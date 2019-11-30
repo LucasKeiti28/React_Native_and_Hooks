@@ -70,6 +70,13 @@ export default function HomeScreen({ navigation }) {
           navigation.navigate("ReducerMakingColor");
         }}
       />
+
+      <Button
+        title="Go To Functional Counter with Reducer"
+        onPress={() => {
+          navigation.navigate("CounterUseReducer");
+        }}
+      />
     </View>
   );
 }
