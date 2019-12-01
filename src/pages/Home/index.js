@@ -25,7 +25,7 @@ export default function HomeScreen({ navigation }) {
       <Button
         title="Go To Image Screen"
         onPress={() => {
-          navigation.navigate("ImageScreen");
+          navigation.navigate("Image");
         }}
       />
 
@@ -75,6 +75,12 @@ export default function HomeScreen({ navigation }) {
         title="Go To Functional Counter with Reducer"
         onPress={() => {
           navigation.navigate("CounterUseReducer");
+        }}
+      />
+      <Button
+        title="Go To TextScreen"
+        onPress={() => {
+          navigation.navigate("TextScreen");
         }}
       />
     </View>

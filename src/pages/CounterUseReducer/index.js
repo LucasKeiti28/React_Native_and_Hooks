@@ -1,14 +1,12 @@
 import React, { useReducer } from "react";
 import { SafeAreaView, Text, Button, StyleSheet } from "react-native";
 
-// import { Container } from './styles';
-
 function reducer(state, action) {
   switch (action.type) {
     case "INCREASE_VALUE":
-      return { value: state.value + 1 };
+      return { ...state, value: state.value + action.payload };
     case "DECREASE_VALUE":
-      return { value: state.value - 1 };
+      return { ...state, value: state.value - action.payload };
     default:
       return state;
   }
@@ -23,11 +21,11 @@ export default function CounterUseReducer() {
 
       <Button
         title="INCREASE BUTTON"
-        onPress={() => dispatch({ type: "INCREASE_VALUE" })}
+        onPress={() => dispatch({ type: "INCREASE_VALUE", payload: 1 })}
       />
       <Button
         title="DECREASE BUTTON"
-        onPress={() => dispatch({ type: "DECREASE_VALUE" })}
+        onPress={() => dispatch({ type: "DECREASE_VALUE", payload: -1 })}
       />
     </SafeAreaView>
   );
